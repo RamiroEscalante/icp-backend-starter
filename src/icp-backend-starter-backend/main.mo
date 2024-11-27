@@ -1,14 +1,19 @@
-// Nombre: Joshua Gustavo Díaz Ventura
+// Nombre: Ramiro Escalante
 // Pais: México
-// Experiencia: 2 años en programación web y 4 años en automatizaciónes de procesos, bases de datos y administración de servidores
+// Experiencia: Fue algo que  nunca pense que pasaria
 actor Name { 
-  var name: Text="";
+  var NombrePersona: Text="";
+  var ApellidoPersona: Text = "";
 
-  public query func getName(): async Text {
-    return name;
+  public query func mostrarPersona(): async Text {
+    let Persona: Text = NombrePersona # " " # ApellidoPersona;
+    return Persona;
   };
 
-  public func saveName(littlenamemare: Text){
-     name := littlenamemare;
+  public func obtenNombre(nombre: Text){
+     NombrePersona := nombre;
+  };
+   public func obtenApellido(apellido: Text){
+     ApellidoPersona := apellido;
   };
 };  
